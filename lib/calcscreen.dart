@@ -98,6 +98,23 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                 ),
               ),
             ),
+            SizedBox(
+              height: 30,
+            ),
+            Container(
+              width: double.infinity,
+              height: 50,
+              child: ElevatedButton(
+                onPressed: _clearDisplay,
+                style: ElevatedButton.styleFrom(
+                  primary: Color(0Xff977FD7),
+                ),
+                child: Text(
+                  'Clear Screen',
+                  style: TextStyle(fontSize: 24.0, color: Color(0XFFF5A9CB)),
+                ),
+              ),
+            ),
             Row(
               children: [
                 _buildButton('7'),
@@ -130,20 +147,6 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                 _buildButton('+'),
               ],
             ),
-            Container(
-              width: double.infinity,
-              height: 50,
-              child: ElevatedButton(
-                onPressed: _clearDisplay,
-                style: ElevatedButton.styleFrom(
-                  primary: Color(0Xff977FD7),
-                ),
-                child: Text(
-                  'Clear Screen',
-                  style: TextStyle(fontSize: 24.0, color: Color(0XFFF5A9CB)),
-                ),
-              ),
-            ),
           ],
         ),
       ),
@@ -160,7 +163,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(0.0), // Button border radius
           ),
-
+             
           elevation: 3.0, // Button elevation
           // Add any other desired styles or decorations
         ),
